@@ -14,7 +14,7 @@ jobs:
       component: catalogue 
 
   main-workflow:
-    if github.ref_name == 'main'
+    if: github.ref_name == 'main'
     runs-on:  ubuntu-latest
     steps:
       - name: main workflow 
