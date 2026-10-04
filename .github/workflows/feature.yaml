@@ -1,7 +1,6 @@
 name: feature workflow
 on:
   push:
-  workflow_dispatch:
     
     # branches-ignore:
     #   - 'main'
@@ -14,6 +13,7 @@ jobs:
       component: catalogue
 
   main-workflow:
+    if github.ref_name == 'main'
     runs-on:  ubuntu-latest
     steps:
       - name: main workflow 
