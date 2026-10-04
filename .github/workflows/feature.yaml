@@ -11,10 +11,11 @@ jobs:
     uses: shajahan-devops1/workflows/.github/workflows/nodejs-eks.yaml@main
     with:
       project: roboshop
-      component: catalogue
+      component: catalogue 
 
   main-workflow:
+    if: github.ref_name == 'main'
     runs-on:  ubuntu-latest
     steps:
-      - name: main workflow
+      - name: main workflow 
         run: echo "this runs when a commit comes to main branch"
